@@ -3,6 +3,7 @@ import { goodbyeMsg, invalidCommandMsg, welcomeMsg } from './utils';
 import { changeDirectory, goUp, listDirectoryContents } from './nwd';
 import { add, cat, copy, move, remove, rename } from './basic';
 import { osInfo } from './os';
+import { hash } from './hash';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -51,6 +52,9 @@ const startProgram = (): void => {
         rl.close();
       case 'os':
         osInfo(command[1]);
+        break;
+      case 'hash':
+        hash(command[1]);
         break;
       default:
         invalidCommandMsg();
