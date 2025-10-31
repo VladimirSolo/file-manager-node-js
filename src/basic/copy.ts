@@ -15,10 +15,10 @@ export const copy = async (sourcePath: string, destinationPath: string): Promise
     const readStream = fs.createReadStream(sourcePath);
     const writeStream = fs.createWriteStream(destinationPath);
 
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       readStream.pipe(writeStream);
 
-      writeStream.on('close', resolve);
+      writeStream.on('close', () => resolve());
       writeStream.on('error', reject);
     });
 
