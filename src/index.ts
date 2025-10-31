@@ -4,6 +4,7 @@ import { changeDirectory, goUp, listDirectoryContents } from './nwd';
 import { add, cat, copy, move, remove, rename } from './basic';
 import { osInfo } from './os';
 import { hash } from './hash';
+import { compress, decompress } from './compress';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -55,6 +56,12 @@ const startProgram = (): void => {
         break;
       case 'hash':
         hash(command[1]);
+        break;
+      case 'compress':
+        compress(command[1], command[2]);
+        break;
+      case 'decompress':
+        decompress(command[1], command[2]);
         break;
       default:
         invalidCommandMsg();
