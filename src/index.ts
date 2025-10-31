@@ -2,6 +2,7 @@ import * as readline from 'readline';
 import { goodbyeMsg, invalidCommandMsg, welcomeMsg } from './utils';
 import { changeDirectory, goUp, listDirectoryContents } from './nwd';
 import { add, cat, copy, move, remove, rename } from './basic';
+import { osInfo } from './os';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -48,6 +49,9 @@ const startProgram = (): void => {
         break;
       case '.exit':
         rl.close();
+      case 'os':
+        osInfo(command[1]);
+        break;
       default:
         invalidCommandMsg();
         break;
