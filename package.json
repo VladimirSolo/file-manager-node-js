@@ -9,7 +9,7 @@
   },
   "type": "module",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "npx tsx src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/VladimirSolo/file-manager-node-js#readme",
   "devDependencies": {
     "ts-node": "^10.9.2",
+    "tsx": "^4.16.0",
     "typescript": "^5.9.3"
   }
 }
