@@ -1,0 +1,29 @@
+{
+  "name": "file-manager-node-js",
+  "version": "1.0.0",
+  "description": "File manatger application built with Node.js and TypeScript.",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=24.10.0",
+    "npm": ">=10.9.2"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirSolo/file-manager-node-js.git"
+  },
+  "keywords": [],
+  "author": "Vladimir Solo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirSolo/file-manager-node-js/issues"
+  },
+  "homepage": "https://github.com/VladimirSolo/file-manager-node-js#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
